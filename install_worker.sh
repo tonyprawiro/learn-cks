@@ -62,7 +62,7 @@ EOF
 
 
 ### install packages
-cat /tmp/apt-key.gpg | apt-key add -
+curl https://github.com/tonyprawiro/learn-cks/raw/main/apt-key.gpg | apt-key add - | apt-key add -
 cat <<EOF > /etc/apt/sources.list.d/kubernetes.list
 deb http://apt.kubernetes.io/ kubernetes-xenial main
 EOF
